@@ -36,6 +36,16 @@ namespace WpfApp1.ViewModels
             if (user != null)
             {
                 MessageBox.Show("Connexion réussie", "Succès");
+                var heroWindow = new Views.HeroManagementView();
+                heroWindow.Show();
+                foreach (Window window in Application.Current.Windows)
+                {
+                    if (window is Views.LoginView)
+                    {
+                        window.Close();
+                        break;
+                    }
+                }
             }
             else
             {
