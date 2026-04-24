@@ -4,62 +4,67 @@
         xmlns:vm="clr-namespace:WpfApp1.ViewModels"
         Title="Gestion des Heros" Height="450" Width="800" WindowStartupLocation="CenterScreen">
 
-    <Window.DataContext>
-        <vm:HeroManagement />
-    </Window.DataContext>
+	<Window.DataContext>
+		<vm:HeroManagement />
+	</Window.DataContext>
 
-    <Grid Margin="15">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
+	<Grid Margin="15">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="250" />
+			<ColumnDefinition Width="*" />
+		</Grid.ColumnDefinitions>
 
-        <GroupBox Header="Héros disponibles" Grid.Column="0" FontWeight="Bold">
-            <ListBox ItemsSource="{Binding Heroes}" 
-                     SelectedItem="{Binding SelectedHero}" 
-                     DisplayMemberPath="Name" 
+		<GroupBox Header="Héros disponibles" Grid.Column="0" FontWeight="Bold">
+			<ListBox ItemsSource="{Binding Heroes}"
+                     SelectedItem="{Binding SelectedHero}"
+                     DisplayMemberPath="Name"
                      Margin="5" FontWeight="Normal"/>
-        </GroupBox>
+		</GroupBox>
 
-        <GroupBox Header="Détails du Héros" Grid.Column="1" Margin="15,0,0,0" FontWeight="Bold">
-            <StackPanel Margin="10">
+		<GroupBox Header="Détails du Héros" Grid.Column="1" Margin="15,0,0,0" FontWeight="Bold">
+			<StackPanel Margin="10">
 
-                <StackPanel.Style>
-                    <Style TargetType="StackPanel">
-                        <Setter Property="Visibility" Value="Visible" />
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding SelectedHero}" Value="{x:Null}">
-                                <Setter Property="Visibility" Value="Hidden" />
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </StackPanel.Style>
+				<StackPanel.Style>
+					<Style TargetType="StackPanel">
+						<Setter Property="Visibility" Value="Visible" />
+						<Style.Triggers>
+							<DataTrigger Binding="{Binding SelectedHero}" Value="{x:Null}">
+								<Setter Property="Visibility" Value="Hidden" />
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</StackPanel.Style>
 
-                <TextBlock Text="{Binding SelectedHero.Name}" FontSize="24" FontWeight="Bold" Margin="0,0,0,15" Foreground="#007ACC"/>
+				<TextBlock Text="{Binding SelectedHero.Name}" FontSize="24" FontWeight="Bold" Margin="0,0,0,15" Foreground="#007ACC"/>
 
-                <TextBlock Text="Points de Vie (HP) :" FontWeight="Bold" />
-                <StackPanel Orientation="Horizontal" Margin="0,5,0,20">
-                    <ProgressBar Value="{Binding SelectedHero.Health}" Maximum="200" Width="300" Height="20" Foreground="#4CAF50"/>
-                    <TextBlock Text="{Binding SelectedHero.Health}" Margin="10,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
-                </StackPanel>
+				<TextBlock Text="Points de Vie (HP) :" FontWeight="Bold" />
+				<StackPanel Orientation="Horizontal" Margin="0,5,0,20">
+					<ProgressBar Value="{Binding SelectedHero.Health}" Maximum="200" Width="300" Height="20" Foreground="#4CAF50"/>
+					<TextBlock Text="{Binding SelectedHero.Health}" Margin="10,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
+				</StackPanel>
 
-                <TextBlock Text="Sorts maîtrisés :" FontWeight="Bold" Margin="0,0,0,5"/>
-                <ItemsControl ItemsSource="{Binding SelectedHero.Spells}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="3" Padding="10" Margin="0,5">
-                                <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding Name}" FontWeight="Bold" Width="150"/>
-                                    <TextBlock Text="Dégâts : " />
-                                    <TextBlock Text="{Binding Damage}" Foreground="DarkRed" FontWeight="Bold" Width="50"/>
-                                    <TextBlock Text="{Binding Description}" FontStyle="Italic" Foreground="Gray" Margin="10,0,0,0"/>
-                                </StackPanel>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
+				<TextBlock Text="Sorts maîtrisés :" FontWeight="Bold" Margin="0,0,0,5"/>
+				<ItemsControl ItemsSource="{Binding SelectedHero.Spells}">
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="3" Padding="10" Margin="0,5">
+								<StackPanel Orientation="Horizontal">
+									<TextBlock Text="{Binding Name}" FontWeight="Bold" Width="150"/>
+									<TextBlock Text="Dégâts : " />
+									<TextBlock Text="{Binding Damage}" Foreground="DarkRed" FontWeight="Bold" Width="50"/>
+									<TextBlock Text="{Binding Description}" FontStyle="Italic" Foreground="Gray" Margin="10,0,0,0"/>
+								</StackPanel>
+							</Border>
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+				</ItemsControl>
 
-            </StackPanel>
-        </GroupBox>
-    </Grid>
+				<Button Content="LANCER LE COMBAT !"
+                        Click="LaunchCombat_Click"
+                        Margin="0,30,0,0" Padding="15" FontSize="16" FontWeight="Bold"
+                        Background="DarkRed" Foreground="White" Cursor="Hand"/>
+
+			</StackPanel>
+		</GroupBox>
+	</Grid>
 </Window>

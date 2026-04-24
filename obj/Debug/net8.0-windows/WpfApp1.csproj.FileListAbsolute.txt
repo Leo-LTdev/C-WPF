@@ -153,3 +153,5 @@ C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\Login
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\LoginView.baml
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\HeroManagementView.g.cs
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\HeroManagementView.baml
+C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\CombatView.baml
+C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\CombatView.g.cs
