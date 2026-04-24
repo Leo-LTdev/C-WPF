@@ -149,3 +149,5 @@ C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\Setti
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1_MarkupCompile.lref
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\SettingsView.baml
+C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\LoginView.g.cs
+C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\LoginView.baml
