@@ -145,3 +145,7 @@ C:\Users\stixi\source\repos\WpfApp1\WpfApp1\bin\Debug\net8.0-windows\runtimes\br
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.csproj.AssemblyReference.cache
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.sourcelink.json
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1.csproj.Up2Date
+C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\SettingsView.g.cs
+C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\WpfApp1_MarkupCompile.lref
+C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\SettingsView.baml
