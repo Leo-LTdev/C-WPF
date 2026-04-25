@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using WpfApp1.Models;
 
@@ -19,30 +20,21 @@ namespace WpfApp1.Services
             {
                 _context.Database.ExecuteSqlRaw("DELETE FROM HeroSpell; DELETE FROM PlayerHero; DELETE FROM Login; DELETE FROM Player; DELETE FROM Hero; DELETE FROM Spell;");
             }
-            var admin = new Login
-            {
-                Username = "admin",
-                PasswordHash = _authService.HashEnBase("admin123")
-            };
+            var admin = new Login { Username = "admin", PasswordHash = _authService.HashEnBase("admin123") };
             _context.Logins.Add(admin);
-            var slash = new Spell { Name = "Coup d'épée", Damage = 25, Description = "Attaque de base" };
-            var fireball = new Spell { Name = "Boule de feu", Damage = 40, Description = "Attaque magique" };
-            var heal = new Spell { Name = "Soin", Damage = -20, Description = "Rend des points de vie" };
-            _context.Spells.AddRange(slash, fireball, heal);
-            var warrior = new Hero
-            {
-                Name = "Guerrier",
-                Health = 150,
-                Spells = new System.Collections.Generic.List<Spell> { slash }
-            };
-            var mage = new Hero
-            {
-                Name = "Mage",
-                Health = 90,
-                Spells = new System.Collections.Generic.List<Spell> { fireball, heal }
-            };
+            var s1 = new Spell { Name = "Coup d'épée", Damage = 20, Description = "Attaque de base rapide." };
+            var s2 = new Spell { Name = "Fracas", Damage = 35, Description = "Lourde frappe étourdissante." };
+            var s3 = new Spell { Name = "Cri de guerre", Damage = 10, Description = "Effraie l'ennemi." };
+            var s4 = new Spell { Name = "Exécution", Damage = 50, Description = "Coup final dévastateur." };
+            var s5 = new Spell { Name = "Boule de feu", Damage = 40, Description = "Puissante magie de feu." };
+            var s6 = new Spell { Name = "Éclair de glace", Damage = 25, Description = "Ralentit l'adversaire." };
+            var s7 = new Spell { Name = "Soin light", Damage = -20, Description = "Rend un peu de vie." };
+            var s8 = new Spell { Name = "Explosion arcane", Damage = 45, Description = "Énergie pure." };
+            _context.Spells.AddRange(s1, s2, s3, s4, s5, s6, s7, s8);
+            var warrior = new Hero { Name = "Guerrier", Health = 150, Spells = new List<Spell> { s1, s2, s3, s4 } };
+            var mage = new Hero { Name = "Mage", Health = 90, Spells = new List<Spell> { s5, s6, s7, s8 } };
             _context.Heroes.AddRange(warrior, mage);
-            _context.SaveChanges(); // save DB
+            _context.SaveChanges();
         }
     }
 }

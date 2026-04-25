@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\App.xaml
-5969758215
+6-1481103855
 
-21-797195285
+23302252605
 229-1645590994
-MainWindow.xaml;Views\CombatView.xaml;Views\HeroManagementView.xaml;Views\LoginView.xaml;Views\SettingsView.xaml;
+MainWindow.xaml;Views\CombatView.xaml;Views\HeroManagementView.xaml;Views\LoginView.xaml;Views\SettingsView.xaml;Views\SpellView.xaml;
 
 True
 

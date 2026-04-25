@@ -64,6 +64,9 @@
                             Click="LaunchCombat_Click"
                             Margin="0,30,0,0" Padding="15" FontSize="16" FontWeight="Bold"
                             Background="DarkRed" Foreground="White" Cursor="Hand"/>
+					<Button Content="Voir tous les sorts" 
+							Click="OpenSpells_Click" Margin="5" Padding="5" 
+							Background="#5D4037" Foreground="White"/>
 
 				</StackPanel>
 			</ScrollViewer>

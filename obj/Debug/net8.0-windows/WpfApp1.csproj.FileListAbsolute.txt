@@ -155,3 +155,5 @@ C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\HeroM
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\HeroManagementView.baml
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\CombatView.baml
 C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\CombatView.g.cs
+C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\SpellView.g.cs
+C:\Users\stixi\source\repos\WpfApp1\WpfApp1\obj\Debug\net8.0-windows\Views\SpellView.baml

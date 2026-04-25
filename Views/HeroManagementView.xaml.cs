@@ -24,5 +24,9 @@ namespace WpfApp1.Views
             };
             combatWindow.ShowDialog();
         }
+        private void OpenSpells_Click(object sender, RoutedEventArgs e)
+        {
+            new SpellView().ShowDialog();
+        }
     }
 }
