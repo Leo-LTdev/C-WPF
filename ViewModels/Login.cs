@@ -13,10 +13,10 @@ namespace WpfApp1.ViewModels
         private readonly AuthService _authService;
 
         [ObservableProperty]
-        private string _username;
+        private string? _username;
 
         [ObservableProperty]
-        private string _password;
+        private string? _password;
 
         public Login()
         {
@@ -51,6 +51,12 @@ namespace WpfApp1.ViewModels
             {
                 MessageBox.Show("Identifiants ou mot de passe incorrect", "Erreur");
             }
+        }
+        [RelayCommand]
+        private void OpenSettings()
+        {
+            var settingsWindow = new Views.SettingsView();
+            settingsWindow.ShowDialog();
         }
     }
 }

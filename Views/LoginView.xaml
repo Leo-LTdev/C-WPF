@@ -21,6 +21,11 @@
             <Button Content="Se connecter" 
                     Command="{Binding SubmitLoginCommand}" 
                     Padding="10" Background="#4CAF50" Foreground="White" FontWeight="Bold"/>
+
+			<Button Content="Initialiser la base de données"
+                    Command="{Binding OpenSettingsCommand}"
+                    Margin="0,20,0,0" Padding="5" Background="Transparent" Foreground="Gray"
+                    BorderThickness="0" Cursor="Hand" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Window>

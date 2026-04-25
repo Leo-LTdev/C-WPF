@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using WpfApp1.Models;
 
 namespace WpfApp1.Services
@@ -14,7 +15,10 @@ namespace WpfApp1.Services
         }
         public void InitData()
         {
-            if (_context.Logins.Any()) return;
+            if (_context.Logins.Any())
+            {
+                _context.Database.ExecuteSqlRaw("DELETE FROM HeroSpell; DELETE FROM PlayerHero; DELETE FROM Login; DELETE FROM Player; DELETE FROM Hero; DELETE FROM Spell;");
+            }
             var admin = new Login
             {
                 Username = "admin",
